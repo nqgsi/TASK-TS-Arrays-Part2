@@ -10,9 +10,11 @@
  */
 
 function isArrayLengthOdd(numbers: number[]): boolean {
-  // Your code here
-
-  return false; // replace false with what you see is fit
+  if (numbers.length % 2 == 1) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -27,9 +29,11 @@ function isArrayLengthOdd(numbers: number[]): boolean {
  */
 
 function isArrayLengthEven(numbers: number[]): boolean {
-  // Your code here
-
-  return false; // replace false with what you see is fit
+  if (numbers.length % 2 == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
@@ -41,9 +45,9 @@ function isArrayLengthEven(numbers: number[]): boolean {
  * addLailaToArray(["Mshary", "Hasan"]); // => ["Mshary", "Hasan", "Laila"]
  */
 function addLailaToArray(instructors: string[]): string[] {
-  // Your code here
-
-  return []; // replace empty array with what you see is fit
+  let newArray: string[] = ["Laila"];
+  instructors.push(...newArray);
+  return instructors;
 }
 
 /**
@@ -55,9 +59,8 @@ function addLailaToArray(instructors: string[]): string[] {
  * eliminateTeam(["Brazil", "Germany", "Italy"]); // => "Italy"
  */
 function eliminateTeam(teams: string[]): string {
-  // Your code here
-
-  return ""; // replace empty string with what you see is fit
+  return teams.pop() || "";
+  console.log(`${teams}}`);
 }
 
 export { isArrayLengthOdd, isArrayLengthEven, addLailaToArray, eliminateTeam };
